@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+        /* overflow-x: hidden; */
+
+}
+.container1{
+    /* background-color: rgb(153, 179, 179); */
+    justify-self: center;
+    max-width: 1440px;
+    width: 100%;
+    /* overflow-x: hidden; */
+}
+.no-scrollbar::-webkit-scrollbar {
+    display: none; /* Hides scrollbar in WebKit-based browsers */
+  }
+.no-scrollbar {
+    -ms-overflow-style: none; /* Hides scrollbar in IE and Edge */
+    scrollbar-width: none; /* Hides scrollbar in Firefox */
+  }
+.mw{
+    max-width: 1440px;
+    width: 100%;
+    max-height: 155px;
+    height: 100%;
+}
+.mw-1 p{
+    
+padding: 25px 10px 25px 65px;
+gap: 10px;
+border-color: transparent;
+}
+.mw-1{
+    max-width: 240px;
+    width: 100%;
+    max-height: 876px;
+    height: 100%;
+}
+.mw-2{
+    max-width: 1440px;
+    width: 100%;
+    max-height: 1000pxpx;
+    height: 100%;
+}
+@font-face {
+    font-family: Circular Std;
+    src: url(./font/Circular\ Std\ Font.ttf);
+}
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Flow+Circular&family=Oswald:wght@200..700&display=swap');
+@font-face{
+    font-family: Adobe Caslon Pro;
+    src: url(./font/Adobe\ Caslon\ Pro.otf); 
+}
+@font-face {
+    font-family: "Playfair Display", serif;
+    src: url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');  
+}
+@font-face {
+    font-family: "Oswald", serif;
+    src: url('https://fonts.googleapis.com/css2?family=Flow+Circular&family=Oswald:wght@200..700&display=swap');  
+}
+@font-face {
+    font-family: ivy-presto-display;
+    src: url(./font/ivy-presto-text-light.otf);
+}
+.cs{
+    font-family: Circular Std;
+}
+.adobe{
+    font-family: Adobe Caslon Pro;
+}
+.platfair{
+    font-family: "Playfair Display", serif;
+}
+.ivy{
+    font-family: "Playfair Display", serif;
+}
+.oswald{
+    font-family: "Oswald", serif;
+}
+.sidebar p:hover{
+    /* border: 1px solid #D4D8EB; */
+    background: black;
+    color: white;
+}
