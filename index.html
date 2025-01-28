@@ -34,9 +34,10 @@
           screens: {
             'xs': '360px',
               'sm': '640px',
-              'md': '768px',
-              'lg': '992px',  // Custom breakpoint
+              'md': '992px',
+              'lg': '1230px',  // Custom breakpoint
               'xl': '1280px',
+              'xl-s' : '1314px',
               'xl-1': '1382px',
               '2xl': '1536px',
           },
@@ -46,14 +47,17 @@
             'blue-secondary': '#5D76FF33',
             'blue-muted': '#EBEDF5',
             'gray-primary' : '#707070',
-            'grey-secondary' : '#D4D8EB',
+            'gray-secondary' : '#D4D8EB',
             'gray-tertiary' : '#54565F',
             'gray-muted' : '#D4D8EB66',
-            // 'gray-light' : '#FBFBFB',
+            'gray-200' : '#7F8294',
+            'gray-300' : 'rgb(128, 126, 126)',
+            'gray-400' : '#373A36',
             'gray-light' : '#E6E6FA',
             'red-primary' : '#BF0000',
             'red-secondary' : '#FFF1F1',
             'red-muted' : '#FFE2E2',
+            'red-ternary' : '#974c4c',
 
           },
           fontFamily: {
@@ -73,10 +77,10 @@
 <body>
         <header  class="sticky top-0 bg-white">
             <div class="container1 ">
-            <div class="xs:hidden md:max-w-[1440px] md:w-full ms:max-h-[148px] md:h-full md:block mw flex flex-col pb-4 px-10 pt-10 gap-10">
-                <div class="cs flex justify-between items-center ">
+            <div class="xs:hidden border-b border-gray-light md:max-w-[1440px] md:w-full ms:max-h-[148px] md:h-full md:block mw flex flex-col pb-6 px-10 pt-10 gap-3">
+                <div class="cs cursor-pointer flex justify-between items-center ">
                     <div class="flex gap-2">
-                        <p>English </p> <img src="./public/arrow-down.png" alt="arrow" title="arrow">
+                        <p>English </p> <img class="w-3 h-3 self-center" src="./public/arrow-down.png" alt="arrow" title="arrow">
                     </div>
                     <div>
                         <img src="./public/Group 1171280676.png" title="logo" alt="logo">
@@ -91,18 +95,21 @@
                       
                 <!-- <div class="hidden lg:block container  flex gap-10 cs justify-center"> -->
                 <div class="container flex gap-10  cs justify-center items-center">
-                    <p>For Businesses</p>
+                    <div class="cursor-pointer flex items-center gap-10 py-2">
+                        <p>For Businesses</p>
                     <p>For Workers</p>
                     <p>Construction Insights</p>
                     <p>About Us</p>
                     <p>Contact Us</p>
                     <button class="border bg-red-secondary rounded-3xl border-red-muted text-red-primary py-2 px-4">Post a Job</button>
+                    </div>
+                    
                 </div>
             </div>
             </div>
         </header>
         <div class="max md:flex container1">
-        <div class="sidebar xs:hidden md:block cs text-base font-normal max mw-1 flex flex-col border-black border-2 pb-72" >
+        <div class="sidebar border-r border-gray-light cursor-pointer xs:hidden md:block cs text-base font-normal max mw-1 flex flex-col  pb-72" >
             <p >Profile</p>
             <p >My Shifts</p>
             <p class="bg-black text-white">Job Postings</p>
@@ -117,7 +124,7 @@
             <div class="md:flex md:flex-col justify-between p-2.5 md:p-0">
             <!-- section-1 -->
              <div >
-              <div class="bg-red-200 xl:max-w-[1090px] xl-1:max-w-[1115px] md:max-w-[1115px]  md:border md:border-gray-light md:p-10 md:rounded-3xl flex flex-col gap-3 md:m-5  ">
+              <div class="xl:max-w-[1090px] xl-1:max-w-[1115px] md:max-w-[1115px]    md:p-10  flex flex-col gap-3 md:m-5  ">
                 <div class="md:flex  justify-between items-center">
                   <div class="md:flex md:flex-col ">
                     <div class="xs:flex xs:justify-between my-5 md:max-w-[250px]">
@@ -125,11 +132,11 @@
                           <img class="w-6 h-6" src="./public/arrow_back.png"> 
                           <p class="cs text-base xs:hidden md:block">Back to my jobs</p>
                       </div>
-                      <p class="cs md:hidden">Invite Workers</p>
+                      <p class="cs md:hidden ">Invite Workers</p>
                     </div>
                       <div class="xs:flex xs:flex-col  w-full gap-4">
                       <!--  part-1-->
-                        <div class="md:flex md:flex-col md:gap-3">
+                        <div class="flex flex-col gap-3">
                           <div class="flex flex-col gap-3">
                             <div class="flex flex-col gap-2">
                                 <div>
@@ -149,19 +156,19 @@
                                 </div>
                                 </div>
                             </div>
-                            <div class="flex flex-wrap gap-2" >
-                                <button class="w-32 md:w-36 md:h-11 h-9 button border rounded-md border-blue-primary bg-gray-muted text-left  pl-2">
+                            <div class="application flex flex-wrap gap-2" >
+                                <button class="w-32 md:w-36 md:h-11 h-9 button border rounded-md border-gray-secondary  bg-gray-muted text-left  pl-2">
                                     <p class="cs text-gray-primary font-normal leading-3 text-[9px] md:text-xs">category</p>
                                     <p class="cs font-normal leading-3 text-xs md:text-sm">General | Handyman</p>
                                 </button>
-                                <button class="w-32 h-9 md:w-36 md:h-11 bg-gray-muted  button border rounded-md border-grey-secondary text-left  pl-2">
+                                <button class="w-32 h-9 md:w-36 md:h-11 bg-gray-muted  button border rounded-md border-gray-secondary text-left  pl-2">
                                     <p class="cs text-gray-primary font-normal leading-3 text-[9px] md:text-xs">Hired</p>
                                     <p class="cs font-normal leading-3 text-xs md:text-sm">2/5 workers</p>
                                 </button>
-                                <button class="w-32 h-9 md:w-36 md:h-11 bg-gray-muted  button border rounded-md border-grey-secondary text-left  pl-2">
+                                <button class="w-32 h-9 md:w-36 md:h-11 bg-gray-muted  button border rounded-md border-gray-secondary text-left  pl-2">
                                   <p class="cs text-gray-primary font-normal leading-3 text-[9px] md:text-xs">Start date</p><p class="cs font-normal leading-3 text-xs md:text-sm">Mon, 08/18/2024</p>
                                 </button>
-                                <button class="w-32 h-9 md:w-36 md:h-11 bg-gray-muted  button border rounded-md border-grey-secondary text-left  pl-2"><p class="cs text-gray-primary font-normal leading-3 text-[9px] md:text-xs">Job Duration</p><p class="cs font-normal leading-3 text-xs md:text-sm">1 month  2 days</p></button>
+                                <button class="w-32 h-9 md:w-36 md:h-11 bg-gray-muted  button border rounded-md border-gray-secondary text-left  pl-2"><p class="cs text-gray-primary font-normal leading-3 text-[9px] md:text-xs">Job Duration</p><p class="cs font-normal leading-3 text-xs md:text-sm">1 month  2 days</p></button>
                             </div>
                         </div>
                   </div>
@@ -170,13 +177,13 @@
                   
                     
                       <!-- part-2 -->
-                      <div class="flex flex-col gap-4 md:gap-6 md:text-end">
-                          <div class="py-2">
+                      <div class="flex flex-col gap-4 md:gap-10 xl-s:gap-6 md:text-end">
+                          <div class="py-3">
                               <p class="cs h-1 text-xs md:text-base">Applications will be accepted upto : 08/16/2024</p>
                           </div>
                           <div class="flex md:flex-col md:gap-4 xs:justify-between md:text-end">
                           <p  class="text-green-secondary oswald xs:text-2xl md:text-4xl border-blue font-medium">$15-$20/hr</p>
-                          <button class="cs self-end xs:text-base md:text-lg font-medium border rounded-3xl border-black bg-red-200 py-2 px-5 xs:max-w-[143px] md:max-w-[210px] w-full">JOB DETAILS</button>
+                          <button class="hover:bg-gray-300 cs self-end xs:text-base md:text-lg font-medium border rounded-3xl border-black  py-2 px-5 xs:max-w-[143px] md:max-w-[210px] w-full">JOB DETAILS</button>
                           </div>
                       </div>
                   </div>
@@ -189,58 +196,107 @@
                     <div class="md:flex md:max-w-[1115px] md:w-full border-b-4 border-gray-light md:justify-between">
                       <div class="w-full max-w-md md:max-w-[1115px] md:w-full  overflow-x-scroll whitespace-nowrap flex  gap-2 items-center no-scrollbar">
                         <button class="py-3 px-4 border-b-4 border-black font-medium cs">Applied &#x2022; 2</button>
-                        <button class="py-3 px-4 flex gap-1 text-gray-primary cs">Hired <p class="text-black">&#x2022; 2</p></button>
-                        <button class="cs py-3 px-4 flex gap-1 text-gray-primary cs">Rejected <p class="text-black">&#x2022; 2</p></button>
-                        <button class="py-3 px-4">Invited &#x2022; 4</button>
+                        <button class="hover:border-b-4 border-black py-3 px-4 flex gap-1 text-gray-primary cs">Hired <p class="text-black">&#x2022; 2</p></button>
+                        <button class="cs hover:border-b-4 border-black py-3 px-4 flex gap-1 text-gray-primary cs">Rejected <p class="text-black">&#x2022; 2</p></button>
+                        <button class="hover:border-b-4 border-black py-3 px-4 flex gap-1 text-gray-primary cs">Invited &#x2022; 4</button>
                     </div>
                     <div class="xs:hidden md:block pr-7 md:max-w-[210px] w-full">
-                      <button class="xs:hidden md:block self-center cs xs:text-base md:text-lg font-medium border rounded-[50px] border-black bg-red-200 py-2 px-5 xs:max-w-[143px] md:max-w-[210px] w-full">Invite Workers</button>
+                      <button class="hover:bg-gray-300 xs:hidden md:block self-center cs xs:text-base md:text-lg font-medium border rounded-[50px] border-black  py-2 px-5 xs:max-w-[143px] md:max-w-[210px] w-full">Invite Workers</button>
                     </div>
                     </div>
                   </div>
-                  <div class="w-full max-w-md md:max-w-[1115px] md:w-full  overflow-x-scroll whitespace-nowrap flex  gap-2 items-center no-scrollbar pt-3 pb-3">
+                  <div class="md:hidden w-full max-w-md md:max-w-[1115px] md:w-full  overflow-x-scroll whitespace-nowrap flex  gap-2 items-center no-scrollbar pt-3 pb-3">
                         <div>
-                            <button class="flex gap-1 cs font-medium border rounded-3xl border-black bg-black text-white items-center py-2 px-5 "> Sort by date applied <img src="./public/arrow-down.png" alt="arrow" title="arrow"> </button>
+                            <button class="hover:text-black hover:bg-gray-300 flex gap-1 cs font-medium border rounded-3xl border-black bg-black text-white items-center py-2 px-5 "> Sort by date applied <img src="./public/arrow-down.png" alt="arrow" title="arrow"> </button>
                         </div>
                         <div>
-                            <button class="flex gap-1 cs font-medium border rounded-3xl border-gray-secondary  items-center py-2 px-5 ">Ratings <img src="./public/arrow-down.png" alt="arrow" title="arrow"> </button>
+                            <button class=" hover:bg-gray-300 flex gap-1 cs font-medium border rounded-3xl border-gray-secondary  items-center py-2 px-5 ">Ratings <img src="./public/arrow-down.png" alt="arrow" title="arrow"> </button>
                         </div>
                         <div>
-                            <button class="flex gap-1 cs font-medium border rounded-3xl border-gray-secondary  items-center py-2 px-5 ">Ratings <img src="./public/arrow-down.png" alt="arrow" title="arrow"> </button>
+                            <button class=" hover:bg-gray-300 flex gap-1 cs font-medium border rounded-3xl border-gray-secondary  items-center py-2 px-5 ">Ratings <img src="./public/arrow-down.png" alt="arrow" title="arrow"> </button>
                         </div>
                         <div>
-                            <button class="flex gap-1 cs font-medium border rounded-3xl border-gray-secondary  items-center py-2 px-5 ">Ratings <img src="./public/arrow-down.png" alt="arrow" title="arrow"> </button>
+                            <button class=" hover:bg-gray-300 flex gap-1 cs font-medium border rounded-3xl border-gray-secondary  items-center py-2 px-5 ">Ratings <img src="./public/arrow-down.png" alt="arrow" title="arrow"> </button>
                         </div>
+                  </div>
+                  <div class="xs:hidden md:block w-full max-w-md md:max-w-[1115px] md:w-full md:flex  gap-2 items-center pt-3 pb-3">
+
+                            <button class="hover:text-black hover:bg-gray-300 flex gap-1 cs font-medium border rounded-3xl border-black bg-black text-white items-center py-2 px-5 "> Sort by date applied <img src="./public/arrow-down.png" alt="arrow" title="arrow"> </button>
+
+                            <div class="relative group">
+
+                            <button class="hover:bg-gray-300 flex gap-1 cs font-medium border rounded-3xl border-gray-secondary  items-center py-2 px-5 ">Ratings <img src="./public/arrow-down.png" alt="arrow" title="arrow"> </button>
+
+                            <div class="absolute left-0 z-10 hidden w-60 mt-2 bg-white border rounded-lg shadow-lg group-hover:block">
+                                <ul class="p-2 space-y-1">
+                                    <div class="cs flex items-center justify-between">
+                                        <li class="font-medium text-xl">Show Me Only</li>
+                                        <li class="font-medium text-xl text-red-primary">Clear</li>
+                                    </div>
+                <li>
+                  <button class="flex items-center w-full  py-2 text-gray-700 hover:bg-gray-100">
+                    ⭐ & up
+                  </button>
+                </li>
+                <li>
+                  <button class="flex items-center w-full py-2 text-gray-700 hover:bg-gray-100">
+                    ⭐⭐ & up
+                  </button>
+                </li>
+                <li>
+                  <button class="flex items-center w-full py-2 text-gray-700 hover:bg-gray-100">
+                    ⭐⭐⭐ & up
+                  </button>
+                </li>
+                <li>
+                  <button class="flex items-center w-full py-2 text-gray-700 hover:bg-gray-100">
+                    ⭐⭐⭐⭐ & up
+                  </button>
+                </li>
+                <li>
+                  <button class="flex items-center w-full py-2 text-gray-700 hover:bg-gray-100">
+                    ⭐⭐⭐⭐⭐ & up
+                  </button>
+                </li>
+                <button class="flex gap-1 cs font-medium border bg-black text-white rounded-[50px] border-gray-secondary  items-center py-2 px-8 w-[210px] h-[55px] justify-center">Submit  </button>
+                                 </ul>
+                            </div>
+                            </div>
+
+                            <button class="hover:text-black hover:bg-gray-300 flex gap-1 cs font-medium border rounded-3xl border-gray-secondary  items-center py-2 px-5 ">Ratings <img src="./public/arrow-down.png" alt="arrow" title="arrow"> </button>
+
+                            <button class="hover:text-black hover:bg-gray-300 flex gap-1 cs font-medium border rounded-3xl border-gray-secondary  items-center py-2 px-5 ">Ratings <img src="./public/arrow-down.png" alt="arrow" title="arrow"> </button>
+
                   </div>
                 </div>
             <!-- section-3 -->
              <div class="flex flex-col md:flex-row">
                 <div class="w-full md:w-auto">
-                    <div class="border rounded-3xl xs:w-full border-grey-secondary md:m-5 md:w-[349px] md:max-h-[727px] md:h-full md:overflow-y-auto no-scrollbar">
+                    <div class="border rounded-3xl xs:w-full border-gray-secondary md:m-5 md:w-[349px] md:max-h-[727px] md:h-full md:overflow-y-auto no-scrollbar">
                         <!-- Card 1 -->
-                        <div class="border-b border-b-grey-secondary bg-white">
-                            <div class="flex flex-col gap-4 m-5 md:m-0 md:p-5">
+                        <div class="border-l-4 border-l-red-primary  border-b border-b-gray-secondary bg-white">
+                            <div class="cards flex flex-col gap-4 m-5 md:m-0 md:p-5">
                                 <div class="flex flex-col gap-3 ">   
                                     <div class="flex justify-between">
                                         <div class="flex flex-col gap-0.5">
                                             <p class="cs text-xs font-normal text-gray-primary">Applied On</p>
                                             <p class="cs text-sm font-medium font-normal text-red-primary">5 June 2024 10:00 am</p>
                                         </div>
-                                        <div class="flex gap-2 items-center">
+                                        <div class="cursor-pointer flex gap-2 items-center">
                                             <p class="cs font-normal text-sm text-blue-primary">Offer Timeline</p>
-                                            <img src="./public/Button.png" alt="message" title="message"> 
+                                            <img class="hover:bg-gray-secondary" src="./public/Button.png" alt="message" title="message"> 
                                         </div>
                                     </div>            
                                     <!-- profile -->
                                     <div class="flex gap-3 items-center">
-                                        <img class="flex  w-15 h-15 rounded-full"
+                                        <img class="flex  max-w-[55px] max-h-[55px] w-full h-full rounded-full"
                                             src="./public/Rectangle 42399.png"
                                             alt="Profile Picture" title="Profile Picture"
                                         />
                                         <div class="flex flex-col gap-1">
                                             <div class="flex gap-3 items-center">
                                                 <h3 class="text-xl font-medium oswald">Brooklyn Simmons</h3>
-                                                <span class="cs ml-2 font-normal bg-blue-secondary text-blue-primary text-xs px-2 py-1 rounded-sm">Invited</span>
+                                                <span class="cursor-pointer hover:bg-blue-primary hover:text-white cs ml-2 font-normal bg-blue-secondary text-blue-primary text-xs px-2 py-1 rounded-sm">Invited</span>
                                             </div>
                                             <div class="flex">
                                                 <p class="flex gap-2 text-base cs font-normal items-center text-gray-primary"><img class="w-3 h-3" src="./public/Vector (2).png">4.9 • 2060 Reviews</p>
@@ -248,44 +304,44 @@
                                         </div>
                                     </div>
                                     
-                                    <div class="flex gap-48 items-center justify-between">
+                                    <div class="flex gap-30 items-center justify-between">
                                         <p class="cs font-normal text-base text-gray-primary">Offer price</p>
                                         <p class="text-2xl oswald font-medium text-green-secondary">$12/hr</p>
                                     </div>
                                     <div class="">
-                                        <p class="text-sm border rounded-md font-normal cs bg-blue-muted text-gray-tertiary px-2 py-1.5">Any note added by the worker when sending the proposal will show here. Lorem ipsum... <a href="#" class="text-black font-normal">View more</a></p>
+                                        <p class="text-xs border rounded-md font-normal cs bg-blue-muted text-gray-tertiary px-2 py-1.5">Any note added by the worker when sending the proposal will show here. Lorem ipsum... <a href="#" class="text-black font-normal">View more</a></p>
                                     </div>                
                                 </div>
                                 <div class="flex gap-3">
-                                    <button class="w-40 h-10 text-center px-5 cs font-medium border rounded-3xl border-black bg-black text-white items-center  "> ACCEPT  </button>
-                                    <button class="w-40 h-10 text-center px-5 cs font-medium border rounded-3xl border-black items-center">REJECT</button>
+                                    <button class="hover:bg-gray-300 hover:text-black w-40 h-10 text-center px-5 cs font-medium border rounded-3xl border-black bg-black text-white items-center  "> ACCEPT  </button>
+                                    <button class="hover:bg-gray-300  w-40 h-10 text-center px-5 cs font-medium border rounded-3xl border-black items-center">REJECT</button>
                                 </div>
                             </div>
                         </div>
                         <!-- card 2 -->
-                        <div class="border-b border-b-grey-secondary bg-white">
-                            <div class="flex flex-col gap-4 m-5 md:m-0 md:p-5">
+                        <div class="hover:border-l-4 border-l-red-primary  border-b border-b-gray-secondary bg-white">
+                            <div class="cards flex flex-col gap-4 m-5 md:m-0 md:p-5">
                                 <div class="flex flex-col gap-3 ">   
                                     <div class="flex justify-between">
                                         <div class="flex flex-col gap-0.5">
                                             <p class="cs text-xs font-normal text-gray-primary">Applied On</p>
                                             <p class="cs text-sm font-medium font-normal text-red-primary">5 June 2024 10:00 am</p>
                                         </div>
-                                        <div class="flex gap-2 items-center">
+                                        <div class="cursor-pointer flex gap-2 items-center">
                                             <p class="cs font-normal text-sm text-blue-primary">Offer Timeline</p>
-                                            <img src="./public/Button.png" alt="message" title="message"> 
+                                            <img class="hover:bg-gray-secondary" src="./public/Button.png" alt="message" title="message"> 
                                         </div>
                                     </div>            
                                     <!-- profile -->
                                     <div class="flex gap-3 items-center">
-                                        <img class="flex  w-15 h-15 rounded-full"
+                                        <img class="flex  max-w-[55px] max-h-[55px] w-full h-full rounded-full"
                                             src="./public/Rectangle 42399.png"
                                             alt="Profile Picture" title="Profile Picture"
                                         />
                                         <div class="flex flex-col gap-1">
                                             <div class="flex gap-3 items-center">
                                                 <h3 class="text-xl font-medium oswald">Brooklyn Simmons</h3>
-                                                <span class="cs ml-2 font-normal bg-blue-secondary text-blue-primary text-xs px-2 py-1 rounded-sm">Invited</span>
+                                                <span class="cursor-pointer hover:bg-blue-primary hover:text-white cs ml-2 font-normal bg-blue-secondary text-blue-primary text-xs px-2 py-1 rounded-sm">Invited</span>
                                             </div>
                                             <div class="flex">
                                                 <p class="flex gap-2 text-base cs font-normal items-center text-gray-primary"><img class="w-3 h-3" src="./public/Vector (2).png">4.9 • 2060 Reviews</p>
@@ -293,44 +349,44 @@
                                         </div>
                                     </div>
                                     
-                                    <div class="flex gap-48 items-center justify-between">
+                                    <div class="flex gap-30 items-center justify-between">
                                         <p class="cs font-normal text-base text-gray-primary">Offer price</p>
                                         <p class="text-2xl oswald font-medium text-green-secondary">$12/hr</p>
                                     </div>
                                     <div class="">
-                                        <p class="text-sm border rounded-md font-normal cs bg-blue-muted text-gray-tertiary px-2 py-1.5">Any note added by the worker when sending the proposal will show here. Lorem ipsum... <a href="#" class="text-black font-normal">View more</a></p>
+                                        <p class="text-xs border rounded-md font-normal cs bg-blue-muted text-gray-tertiary px-2 py-1.5">Any note added by the worker when sending the proposal will show here. Lorem ipsum... <a href="#" class="text-black font-normal">View more</a></p>
                                     </div>                
                                 </div>
                                 <div class="flex gap-3">
-                                    <button class="w-40 h-10 text-center px-5 cs font-medium border rounded-3xl border-black bg-black text-white items-center  "> ACCEPT  </button>
-                                    <button class="w-40 h-10 text-center px-5 cs font-medium border rounded-3xl border-black items-center">REJECT</button>
+                                    <button class="hover:bg-gray-300 hover:text-black w-40 h-10 text-center px-5 cs font-medium border rounded-3xl border-black bg-black text-white items-center  "> ACCEPT  </button>
+                                    <button class="hover:bg-gray-300  w-40 h-10 text-center px-5 cs font-medium border rounded-3xl border-black items-center">REJECT</button>
                                 </div>
                             </div>
                         </div>
                         <!-- card-3 -->
-                        <div class="border-b border-b-grey-secondary bg-white">
-                            <div class="flex flex-col gap-4 m-5 md:m-0 md:p-5">
+                        <div class="hover:border-l-4 border-l-red-primary  border-b border-b-gray-secondary bg-white">
+                            <div class="cards flex flex-col gap-4 m-5 md:m-0 md:p-5">
                                 <div class="flex flex-col gap-3 ">   
                                     <div class="flex justify-between">
                                         <div class="flex flex-col gap-0.5">
                                             <p class="cs text-xs font-normal text-gray-primary">Applied On</p>
                                             <p class="cs text-sm font-medium font-normal text-red-primary">5 June 2024 10:00 am</p>
                                         </div>
-                                        <div class="flex gap-2 items-center">
+                                        <div class="cursor-pointer flex gap-2 items-center">
                                             <p class="cs font-normal text-sm text-blue-primary">Offer Timeline</p>
-                                            <img src="./public/Button.png" alt="message" title="message"> 
+                                            <img class="hover:bg-gray-secondary" src="./public/Button.png" alt="message" title="message"> 
                                         </div>
                                     </div>            
                                     <!-- profile -->
                                     <div class="flex gap-3 items-center">
-                                        <img class="flex  w-15 h-15 rounded-full"
+                                        <img class="flex  max-w-[55px] max-h-[55px] w-full h-full rounded-full"
                                             src="./public/Rectangle 42399.png"
                                             alt="Profile Picture" title="Profile Picture"
                                         />
                                         <div class="flex flex-col gap-1">
                                             <div class="flex gap-3 items-center">
                                                 <h3 class="text-xl font-medium oswald">Brooklyn Simmons</h3>
-                                                <span class="cs ml-2 font-normal bg-blue-secondary text-blue-primary text-xs px-2 py-1 rounded-sm">Invited</span>
+                                                <span class="cursor-pointer hover:bg-blue-primary hover:text-white cs ml-2 font-normal bg-blue-secondary text-blue-primary text-xs px-2 py-1 rounded-sm">Invited</span>
                                             </div>
                                             <div class="flex">
                                                 <p class="flex gap-2 text-base cs font-normal items-center text-gray-primary"><img class="w-3 h-3" src="./public/Vector (2).png">4.9 • 2060 Reviews</p>
@@ -338,44 +394,44 @@
                                         </div>
                                     </div>
                                     
-                                    <div class="flex gap-48 items-center justify-between">
+                                    <div class="flex gap-30 items-center justify-between">
                                         <p class="cs font-normal text-base text-gray-primary">Offer price</p>
                                         <p class="text-2xl oswald font-medium text-green-secondary">$12/hr</p>
                                     </div>
                                     <div class="">
-                                        <p class="text-sm border rounded-md font-normal cs bg-blue-muted text-gray-tertiary px-2 py-1.5">Any note added by the worker when sending the proposal will show here. Lorem ipsum... <a href="#" class="text-black font-normal">View more</a></p>
+                                        <p class="text-xs border rounded-md font-normal cs bg-blue-muted text-gray-tertiary px-2 py-1.5">Any note added by the worker when sending the proposal will show here. Lorem ipsum... <a href="#" class="text-black font-normal">View more</a></p>
                                     </div>                
                                 </div>
                                 <div class="flex gap-3">
-                                    <button class="w-40 h-10 text-center px-5 cs font-medium border rounded-3xl border-black bg-black text-white items-center  "> ACCEPT  </button>
-                                    <button class="w-40 h-10 text-center px-5 cs font-medium border rounded-3xl border-black items-center">REJECT</button>
+                                    <button class="hover:bg-gray-300 hover:text-black w-40 h-10 text-center px-5 cs font-medium border rounded-3xl border-black bg-black text-white items-center  "> ACCEPT  </button>
+                                    <button class="hover:bg-gray-300  w-40 h-10 text-center px-5 cs font-medium border rounded-3xl border-black items-center">REJECT</button>
                                 </div>
                             </div>
                         </div>
                         <!-- card-4 -->
-                        <div class="border-b border-b-grey-secondary bg-white">
-                            <div class="flex flex-col gap-4 m-5 md:m-0 md:p-5">
+                        <div class="hover:border-l-4 border-l-red-primary  border-b border-b-gray-secondary bg-white">
+                            <div class="cards flex flex-col gap-4 m-5 md:m-0 md:p-5">
                                 <div class="flex flex-col gap-3 ">   
                                     <div class="flex justify-between">
                                         <div class="flex flex-col gap-0.5">
                                             <p class="cs text-xs font-normal text-gray-primary">Applied On</p>
                                             <p class="cs text-sm font-medium font-normal text-red-primary">5 June 2024 10:00 am</p>
                                         </div>
-                                        <div class="flex gap-2 items-center">
+                                        <div class="cursor-pointer flex gap-2 items-center">
                                             <p class="cs font-normal text-sm text-blue-primary">Offer Timeline</p>
-                                            <img src="./public/Button.png" alt="message" title="message"> 
+                                            <img class="hover:bg-gray-secondary" src="./public/Button.png" alt="message" title="message"> 
                                         </div>
                                     </div>            
                                     <!-- profile -->
                                     <div class="flex gap-3 items-center">
-                                        <img class="flex  w-15 h-15 rounded-full"
+                                        <img class="flex  max-w-[55px] max-h-[55px] w-full h-full rounded-full"
                                             src="./public/Rectangle 42399.png"
                                             alt="Profile Picture" title="Profile Picture"
                                         />
                                         <div class="flex flex-col gap-1">
                                             <div class="flex gap-3 items-center">
                                                 <h3 class="text-xl font-medium oswald">Brooklyn Simmons</h3>
-                                                <span class="cs ml-2 font-normal bg-blue-secondary text-blue-primary text-xs px-2 py-1 rounded-sm">Invited</span>
+                                                <span class="cursor-pointer hover:bg-blue-primary hover:text-white cs ml-2 font-normal bg-blue-secondary text-blue-primary text-xs px-2 py-1 rounded-sm">Invited</span>
                                             </div>
                                             <div class="flex">
                                                 <p class="flex gap-2 text-base cs font-normal items-center text-gray-primary"><img class="w-3 h-3" src="./public/Vector (2).png">4.9 • 2060 Reviews</p>
@@ -383,43 +439,43 @@
                                         </div>
                                     </div>
                                     
-                                    <div class="flex gap-48 items-center justify-between">
+                                    <div class="flex gap-30 items-center justify-between">
                                         <p class="cs font-normal text-base text-gray-primary">Offer price</p>
                                         <p class="text-2xl oswald font-medium text-green-secondary">$12/hr</p>
                                     </div>
                                     <div class="">
-                                        <p class="text-sm border rounded-md font-normal cs bg-blue-muted text-gray-tertiary px-2 py-1.5">Any note added by the worker when sending the proposal will show here. Lorem ipsum... <a href="#" class="text-black font-normal">View more</a></p>
+                                        <p class="text-xs border rounded-md font-normal cs bg-blue-muted text-gray-tertiary px-2 py-1.5">Any note added by the worker when sending the proposal will show here. Lorem ipsum... <a href="#" class="text-black font-normal">View more</a></p>
                                     </div>                
                                 </div>
                                 <div class="flex gap-3">
-                                    <button class="w-40 h-10 text-center px-5 cs font-medium border rounded-3xl border-black bg-black text-white items-center  "> ACCEPT  </button>
-                                    <button class="w-40 h-10 text-center px-5 cs font-medium border rounded-3xl border-black items-center">REJECT</button>
+                                    <button class="hover:bg-gray-300 hover:text-black w-40 h-10 text-center px-5 cs font-medium border rounded-3xl border-black bg-black text-white items-center  "> ACCEPT  </button>
+                                    <button class="hover:bg-gray-300  w-40 h-10 text-center px-5 cs font-medium border rounded-3xl border-black items-center">REJECT</button>
                                 </div>
                             </div>
                         </div>
                     </div>  
                 </div>
-                <div class="mt-5 bg-white xs:hidden rounded-3xl border-grey-secondary md:block md:w-[746px] md:max-h-[727px] md:h-full overflow-y-auto no-scrollbar">
-                    <div class="border rounded-3xl border-grey-secondary p-7">
+                <div class="mt-5 bg-white xs:hidden rounded-3xl border-gray-secondary md:block md:max-w-[746px] md:w-full md:max-h-[727px] md:h-full overflow-y-auto no-scrollbar">
+                    <div class="border rounded-3xl border-gray-secondary p-7">
                         <div class="">
-                            <div class="flex justify-between items-center">
+                            <div class="flex flex-wrap justify-between  items-start">
                                 <div class="flex flex-col gap-4">
                                     <div>
                                         <h2 class="text-4xl">Brooklyn Simmons</h2>
                                     </div>
-                                    <div class="flex gap-2">
+                                    <div class="flex flex-wrap gap-2">
                                         <p class="flex gap-2 cs text-lg text-gray-primary"><img class="w-3 h-3 self-center" src="./public/Vector (2).png">4.5</p>
                                         <p class="cs text-lg text-gray-primary">2060 Reviews</p>
                                         <p class="cs text-lg text-gray-primary">5 yrs of experience</p>
                                     </div>
                                 </div>
-                                <div>
-                                    <button class="w-[210px] h-[53px] text-center  cs font-medium border rounded-[50px] px-11 py-4 border-black bg-black text-white items-center text-base "> VIEW PROFILE  </button>
+                                <div class="mt-4 lg:mt-0">
+                                    <button class="hover:text-black hover:bg-gray-300 w-[210px] h-[53px] text-center  cs font-medium border rounded-[50px] px-11 py-4 border-black bg-black text-white items-center text-base "> VIEW PROFILE  </button>
                                 </div>
                             </div>
                             <div class="pt-5 flex gap-3">
-                                <button class="w-[160px] h-[53px] px-11 py-4 text-center  cs font-medium border rounded-[50px] border-black bg-black text-white items-center  "> ACCEPT  </button>
-                                <button class="w-[160px] h-[53px] px-11 py-4 text-center  cs font-medium border rounded-[50px] border-black items-center  ">REJECT</button>
+                                <button class="hover:text-black hover:bg-gray-300 w-[160px] h-[53px] px-11 py-4 text-center  cs font-medium border rounded-[50px] border-black bg-black text-white items-center  "> ACCEPT  </button>
+                                <button class=" hover:bg-gray-300 w-[160px] h-[53px] px-11 py-4 text-center  cs font-medium border rounded-[50px] border-black items-center  ">REJECT</button>
                             </div>
                             <div class="pt-5"> 
                                 <p class="cs text-lg">About</p>
@@ -429,33 +485,38 @@
                         <div class="pt-8">
                             <div class="flex gap-4 flex-col">
                                 <h2 class="text-xl cs">Badges</h2>
-                                <div class="flex gap-2">
-                                    <img src="./public/Phone.png" alt="phone" title="phone">
-                                    <img src="./public/Email.png" alt="mail" title="mail">
-                                    <img src="./public/ID.png" alt="id" title="id">
+                                <div class="cursor-pointer flex gap-2">
+                                    <img class="hover:border border-gray-secondary " src="./public/Phone.png" alt="phone" title="phone">
+                                    <img class="hover:border border-gray-secondary" src="./public/Email.png" alt="mail" title="mail">
+                                    <img class="hover:border border-gray-secondary" src="./public/ID.png" alt="id" title="id">
                                 </div>
                             </div>
                             <div class="pt-8">
                                 <h3 class="text-xl cs " >Skills</h3>
                                 <div class="pt-4 pl-5">
-                                    <p class="cs text-base pt-3 pb-2">General > Brickalyer</p>
-                                    <p class="cs text-base pb-3">Communication Skills, Cutting, Finishing, Knowledge of Materials, Laying</p>
+                                    <p class="cs text-base pt-3 pb-2 text-gray-400">General > Brickalyer</p>
+                                    <p class="cs text-base text-gray-200 pb-3">Communication Skills, Cutting, Finishing, Knowledge of Materials, Laying</p>
                                 </div>
                                 <div class="pt-4 pl-5">
-                                    <p class="cs text-base pt-3 pb-2">General > Brickalyer</p>
-                                    <p class="cs text-base pb-3">Communication Skills, Cutting, Finishing, Knowledge of Materials, Laying</p>
+                                    <p class="cs text-base pt-3 pb-2  text-gray-400 ">General > Brickalyer</p>
+                                    <p class="cs text-base text-gray-200 pb-3 ">Communication Skills, Cutting, Finishing, Knowledge of Materials, Laying, C...<span class="text-red-primary cursor-pointer hover:text-red-ternary">Show more
+                                    </span></p>
                                 </div>
                             </div>
+                            
                             <div class="pt-8">
-                                <h3 class="text-xl cs " >Skills</h3>
-                                <div class="pt-4 pl-5">
-                                    <p class="cs text-base pt-3 pb-2">General > Brickalyer</p>
-                                    <p class="cs text-base pb-3">Communication Skills, Cutting, Finishing, Knowledge of Materials, Laying</p>
-                                </div>
-                                <div class="pt-4 pl-5">
-                                    <p class="cs text-base pt-3 pb-2">General > Brickalyer</p>
-                                    <p class="cs text-base pb-3">Communication Skills, Cutting, Finishing, Knowledge of Materials, Laying</p>
-                                </div>
+                                <h3 class="text-xl cs" >Trade Certifications</h3>
+                                <div class="overflow-x-auto whitespace-nowrap flex gap-2 pt-4 pl-5 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:'none'] [scrollbar-width:'none']">
+                                    <img class="max-w-[140px] w-full max-h-[140px] h-full" src="./public/Rectangle 43364.png">
+                                    <img class="max-w-[140px] w-full max-h-[140px] h-full" src="./public/Rectangle 43362.png">
+                                    <img class="max-w-[140px] w-full max-h-[140px] h-full" src="./public/Rectangle 43363.png">
+                                    <img class="max-w-[140px] w-full max-h-[140px] h-full" src="./public/Rectangle 43364.png">
+                                    <img class="max-w-[140px] w-full max-h-[140px] h-full" src="./public/Rectangle 43362.png">
+                                    <img class="max-w-[140px] w-full max-h-[140px] h-full" src="./public/Rectangle 43363.png">
+                                    <img class="max-w-[140px] w-full max-h-[140px] h-full" src="./public/Rectangle 43364.png">
+                                    <img class="max-w-[140px] w-full max-h-[140px] h-full" src="./public/Rectangle 43362.png">
+                                    <img class="max-w-[140px] w-full max-h-[140px] h-full" src="./public/Rectangle 43363.png">
+                                </div>                                
                             </div>
                         </div>
                     </div>

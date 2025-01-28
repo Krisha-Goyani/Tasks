@@ -47,6 +47,9 @@ border-color: transparent;
     max-height: 1000pxpx;
     height: 100%;
 }
+.application button:hover{
+    border-color: #5D76FF ;
+}
 @font-face {
     font-family: Circular Std;
     src: url(./font/Circular\ Std\ Font.ttf);
