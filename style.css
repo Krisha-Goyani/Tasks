@@ -8,7 +8,16 @@
     box-sizing: border-box;
         /* overflow-x: hidden; */
 
-}
+}  
+/* Box-shadow for left border effect on hover */
+  .card:hover {
+    /* position: relative; */
+    box-shadow: inset 4px  0px #BF0000;/* Red box-shadow on the left */
+  }
+  .b1:hover {
+    /* position: relative; */
+    box-shadow: inset 0 0 0 1px #D4D8EB;
+}  
 .container1{
     /* background-color: rgb(153, 179, 179); */
     justify-self: center;
