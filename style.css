@@ -25,13 +25,34 @@
     width: 100%;
     /* overflow-x: hidden; */
 }
+/* Add this to your CSS */
+.custom-scrollbar {
+    overflow-x: auto;
+    overflow-y: visible;
+}
+.custom-scrollbar::-webkit-scrollbar {
+    height: 2px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 3px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #7e7c7c;
+}
 .no-scrollbar::-webkit-scrollbar {
     display: none; /* Hides scrollbar in WebKit-based browsers */
   }
 .no-scrollbar {
     -ms-overflow-style: none; /* Hides scrollbar in IE and Edge */
     scrollbar-width: none; /* Hides scrollbar in Firefox */
-  }
+}
 .mw{
     max-width: 1440px;
     width: 100%;
@@ -58,6 +79,7 @@ border-color: transparent;
 }
 .application button:hover{
     border-color: #5D76FF ;
+    background: #eaebf1;
 }
 @font-face {
     font-family: Circular Std;
@@ -66,6 +88,7 @@ border-color: transparent;
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Flow+Circular&family=Oswald:wght@200..700&display=swap');
+
 @font-face{
     font-family: Adobe Caslon Pro;
     src: url(./font/Adobe\ Caslon\ Pro.otf); 
@@ -75,8 +98,8 @@ border-color: transparent;
     src: url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');  
 }
 @font-face {
-    font-family: "Oswald", serif;
-    src: url('https://fonts.googleapis.com/css2?family=Flow+Circular&family=Oswald:wght@200..700&display=swap');  
+    font-family: oswald;
+    src: url('./font/oswald.regular.ttf');
 }
 @font-face {
     font-family: ivy-presto-display;
@@ -88,14 +111,14 @@ border-color: transparent;
 .adobe{
     font-family: Adobe Caslon Pro;
 }
-.platfair{
+.playfair{
     font-family: "Playfair Display", serif;
 }
 .ivy{
     font-family: "Playfair Display", serif;
 }
 .oswald{
-    font-family: "Oswald", serif;
+    font-family: oswald;
 }
 .sidebar p:hover{
     /* border: 1px solid #D4D8EB; */
